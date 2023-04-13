@@ -5,7 +5,7 @@ module uart_tx(
 		//tx_flag
 		input					tx_flag				,
 		//UART Interface
-		output					rs232_tx			,
+		output	reg				rs232_tx			,
 		//others
 		output	reg		[7:0]	tx_data				,
 
@@ -74,7 +74,7 @@ module uart_tx(
 			bit_cnt <= 13'd0;
 		end
 		else if(work_en) begin
-			if(bit_cnt == BIT_END - 1'b1) begin
+			if(bit_cnt == BIT_END - 1'b1 && bit_flag == 1'b1) begin
 				bit_cnt <= 4'd0;
 			end
 			else if(bit_flag == 1'b1) begin  
@@ -91,7 +91,7 @@ module uart_tx(
 		if(!s_rst_n) begin
 			rs232_tx <= 1'b0;
 		end
-		else begin  //须在bit_flag为1时发送，不然会一直赋值
+		else (bit_flag == 1'b1)begin  //须在bit_flag为1时发送，不然会一直赋值
 			case(bit_cnt)
 				'd0 : rs232_tx <= 1'b0;  //起始位
 				'd1 : rs232_tx <= tx_data[0];
