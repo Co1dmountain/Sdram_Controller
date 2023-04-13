@@ -7,23 +7,23 @@ module uart_tx(
 		//UART Interface
 		output	reg				rs232_tx			,
 		//others
-		input			[7:0]	tx_data				,
+		input			[7:0]	tx_data				
 
 );
 
 	//define parameter and internal signals
-	localparam BAUD_END = 5208;
-	localparam BAUD_MID = BAUD_END / 2 - 1;
-	localparam BIT_END  = 10;
-	reg work_en;
-	reg bit_flag;
-	reg [12:0] baud_cnt;
-	reg [3:0]  bit_cnt;
-	reg 
+	localparam		BAUD_END		= 5208;
+	localparam		BAUD_MID		= BAUD_END / 2 - 1;
+	localparam		BIT_END			= 10;
+	reg 			work_en		;
+	reg 			bit_flag	;
+	reg	[12:0] 		baud_cnt	;
+	reg [3:0]  		bit_cnt		;
 	
-	//main code
 	
-	//work_en
+	//// main code ////
+	
+	// work_en
 	always @(posedge sclk or negedge s_rst_n) begin
 		if(!s_rst_n) begin
 			work_en <= 1'b0;
@@ -36,7 +36,7 @@ module uart_tx(
 		end
 	end
 	
-	//baud_cnt
+	// baud_cnt
 	always @(posedge sclk or negedge s_rst_n) begin
 		if(!s_rst_n) begin
 			baud_cnt <= 13'd0;
@@ -55,7 +55,7 @@ module uart_tx(
 		
 	end
 
-	//bit_flag
+	// bit_flag
 	always @(posedge sclk or negedge s_rst_n) begin
 		if(!s_rst_n) begin
 			bit_flag <= 1'b0;
@@ -68,7 +68,7 @@ module uart_tx(
 		end
 	end
 	
-	//bit_cnt
+	// bit_cnt
 	always @(posedge sclk or negedge s_rst_n) begin
 		if(!s_rst_n) begin
 			bit_cnt <= 13'd0;
@@ -86,12 +86,12 @@ module uart_tx(
 		end
 	end
 	
-	//send_data state machine
+	// send data 
 	always @(posedge sclk or negedge s_rst_n) begin
 		if(!s_rst_n) begin
 			rs232_tx <= 1'b0;
 		end
-		else (bit_flag == 1'b1)begin  //须在bit_flag为1时发送，不然会一直赋值
+		else if (bit_flag == 1'b1)begin  //须在bit_flag为1时发送，不然会一直赋值
 			case(bit_cnt)
 				'd0 : rs232_tx <= 1'b0;  //起始位
 				'd1 : rs232_tx <= tx_data[0];

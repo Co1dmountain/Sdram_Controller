@@ -1,4 +1,4 @@
-module top(
+module uart_top(
 	//input 
 	input		sys_clk			,
 	input		sys_rst_n		,
@@ -8,7 +8,7 @@ module top(
 	output		rs232_tx		
 );
 	//// define ////
-	wire		[7:0]		rx_data		;
+	wire		[7:0]		po_data		;
 	wire					tx_flag		;
 
 
@@ -20,7 +20,7 @@ module top(
 			
 			.rs232_rx		(rs232_rx)		,
 			
-			.rx_data		(rx_data)		,
+			.po_data		(po_data)		,
 			
 			.po_flag		(tx_flag)
 	);
@@ -31,9 +31,9 @@ module top(
 			
 			.tx_flag		(tx_flag)		,
 			
-			.tx_data		(rx_data)		,
+			.tx_data		(po_data)		,
 			
-			.rs232_tx		(rs232_tx)		,
+			.rs232_tx		(rs232_tx)		
 	);
 	
 	
