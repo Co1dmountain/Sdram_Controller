@@ -7,7 +7,7 @@ module uart_tx(
 		//UART Interface
 		output	reg				rs232_tx			,
 		//others
-		output	reg		[7:0]	tx_data				,
+		input			[7:0]	tx_data				,
 
 );
 
