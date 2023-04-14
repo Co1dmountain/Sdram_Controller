@@ -1,0 +1,636 @@
+Flow report for Sdram_Controller
+Fri Apr 14 10:01:03 2023
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Fri Apr 14 10:01:02 2023       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; Sdram_Controller                            ;
+; Top-level Entity Name              ; uart_top                                    ;
+; Family                             ; Cyclone II                                  ;
+; Device                             ; EP2C35F672C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 955 / 33,216 ( 3 % )                        ;
+;     Total combinational functions  ; 595 / 33,216 ( 2 % )                        ;
+;     Dedicated logic registers      ; 758 / 33,216 ( 2 % )                        ;
+; Total registers                    ; 758                                         ;
+; Total pins                         ; 3 / 475 ( < 1 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 180,224 / 483,840 ( 37 % )                  ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/13/2023 21:29:11 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Sdram_Controller    ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                    ;
++-------------------------------------+---------------------------------+------------------+-------------+------------+
+; Assignment Name                     ; Value                           ; Default Value    ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------+------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 198516029817897.168139255143196 ; --               ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --               ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --               ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                        ; --               ; uart_top    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --               ; uart_top    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --               ; uart_top    ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --               ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; uart_top                        ; Sdram_Controller ; --          ; --         ;
++-------------------------------------+---------------------------------+------------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 5702 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4579 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.4                     ; 4700 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:04     ; 2.8                     ; 5683 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4574 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4588 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.5                     ; 4708 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 2.4                     ; 5699 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4603 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.5                     ; 4708 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5689 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4701 MB             ; 00:00:04                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4620 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5689 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4603 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4704 MB             ; 00:00:04                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4619 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5699 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4588 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.5                     ; 4704 MB             ; 00:00:04                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4619 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 2.4                     ; 5711 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.5                     ; 4696 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5706 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4568 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4670 MB             ; 00:00:02                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4661 MB             ; 00:00:02                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4665 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4665 MB             ; 00:00:02                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 2.4                     ; 5702 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4675 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5696 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.5                     ; 4700 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5698 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.5                     ; 4708 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4662 MB             ; 00:00:02                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 2.4                     ; 5694 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.5                     ; 4712 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4705 MB             ; 00:00:04                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5709 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.8                     ; 4704 MB             ; 00:00:06                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5691 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.5                     ; 4716 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4703 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4662 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5713 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.4                     ; 4720 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 2.4                     ; 5682 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4716 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5686 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.5                     ; 4720 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5691 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.2                     ; 4713 MB             ; 00:00:06                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 2.2                     ; 5688 MB             ; 00:00:09                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4670 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4691 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5709 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4595 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4719 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5703 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.2                     ; 4712 MB             ; 00:00:05                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 2.4                     ; 5706 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4670 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4667 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5694 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4670 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5686 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4670 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4665 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4665 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.3                     ; 4719 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.3                     ; 4705 MB             ; 00:00:04                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5704 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4670 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4876 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4665 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 4876 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.3                     ; 4723 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4666 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 2.4                     ; 5709 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.5                     ; 4713 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.8                     ; 5698 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4604 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.3                     ; 4708 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4667 MB             ; 00:00:03                           ;
+; Partition Merge           ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 2.4                     ; 5711 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Total                     ; 00:06:45     ; --                      ; --                  ; 00:08:16                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-RCKDC97B  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_map --read_settings_files=on --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_cdb --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_asm --read_settings_files=off --write_settings_files=off Sdram_Controller -c Sdram_Controller
+quartus_sta Sdram_Controller -c Sdram_Controller
+
+
+
