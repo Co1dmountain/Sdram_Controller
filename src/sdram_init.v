@@ -5,7 +5,7 @@ module sdram_init(
 		
 		// 
 		output	reg [ 3:0]	cmd_reg				,
-		output		[12:0]	sdram_addr			,
+		output		[11:0]	sdram_addr			,
 		output 				flag_init_end
 );
 
@@ -20,7 +20,7 @@ module sdram_init(
 	localparam				MODE_SET	= 4'b0000	;
 	
 	reg		[13:0]			cnt_200us				;
-	wire						flag_200us				;
+	wire					flag_200us				;
 	reg		[ 3:0]			cnt_cmd					;
 
 	

@@ -7,84 +7,114 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/ic/project/Sdram_Controller/modelsimprj
-vsdram_init
-Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z0 dD:/ic/project/Sdram_Controller/modelsimprj
+T_opt
+!s110 1681731226
+VcFK]:Za>9^A:@n_ZgUNe:0
+04 12 4 work sdram_top_tb fast 0
+=1-0826ae34d168-643d2e9a-354-60cc
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+R0
+vsdram_auto_refr
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 31
 !i10b 1
-!s100 gV]P1d`O<CXG=T6?Ok>lS0
-IhlP0c_kDIKbY9jTLW?kMT2
-Z1 dD:/ic/project/Sdram_Controller/sim
-w1681480373
+!s100 Y3Q1Y8khRFMeam=JaZZ^J1
+I>lYMNLjhm6JRf>ZN>MoaW2
+Z3 dD:/ic/project/Sdram_Controller/sim
+w1681731835
+8D:/ic/project/Sdram_Controller/src/sdram_auto_refr.v
+FD:/ic/project/Sdram_Controller/src/sdram_auto_refr.v
+L0 1
+Z4 OL;L;10.5;63
+Z5 !s108 1681732060.000000
+!s107 D:/ic/project/Sdram_Controller/src/sdram_auto_refr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ic/project/Sdram_Controller/src/sdram_auto_refr.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vsdram_init
+R2
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]Plna8lPOUQV4glER@d2b2
+IO:4?Z^eR]U0CIaMe9cX3>0
+R3
+w1681700226
 8D:/ic/project/Sdram_Controller/src/sdram_init.v
 FD:/ic/project/Sdram_Controller/src/sdram_init.v
 L0 1
-Z2 OL;L;10.5;63
-!s108 1681480384.000000
+R4
+R5
 !s107 D:/ic/project/Sdram_Controller/src/sdram_init.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ic/project/Sdram_Controller/src/sdram_init.v|
 !i113 0
-Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z4 tCvgOpt 0
+R6
+R1
 vsdram_model_plus
-R0
+R2
 r1
 !s85 0
 31
 !i10b 1
 !s100 a7CT;8J_5Q^3bP1zeIM>30
 IQHSM:fHLaNY<lACj7o`8A0
-R1
+R3
 w1681479607
 8D:/ic/project/Sdram_Controller/sim/sdram_model_plus.v
 FD:/ic/project/Sdram_Controller/sim/sdram_model_plus.v
 L0 56
-R2
-Z5 !s108 1681479611.000000
+R4
+R5
 !s107 D:/ic/project/Sdram_Controller/sim/sdram_model_plus.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ic/project/Sdram_Controller/sim/sdram_model_plus.v|
 !i113 0
-R3
-R4
+R6
+R1
 vsdram_top
-R0
+R2
 r1
 !s85 0
 31
 !i10b 1
-!s100 nD[b1BB<LbENc1HQ<<SSE2
-IVkV@9ETK6bV<JW;Vzn:7f1
-R1
-w1681477969
+!s100 JH;L^8nIX@<meRb`]e^Y>0
+IboI23N2RX:UIz2Wn:NT;80
+R3
+w1681732229
 8D:/ic/project/Sdram_Controller/src/sdram_top.v
 FD:/ic/project/Sdram_Controller/src/sdram_top.v
 L0 1
-R2
-R5
+R4
+!s108 1681732232.000000
 !s107 D:/ic/project/Sdram_Controller/src/sdram_top.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ic/project/Sdram_Controller/src/sdram_top.v|
 !i113 0
-R3
-R4
+R6
+R1
 vsdram_top_tb
-R0
+R2
 r1
 !s85 0
 31
 !i10b 1
 !s100 XLH1QI]J9_=6P_G5zC;P[3
 IB4ZjGGl7GY^5gPO<Q<F`B0
-R1
+R3
 w1681479862
 8D:/ic/project/Sdram_Controller/sim/sdram_top_tb.v
 FD:/ic/project/Sdram_Controller/sim/sdram_top_tb.v
 L0 3
-R2
-!s108 1681479866.000000
+R4
+R5
 !s107 D:/ic/project/Sdram_Controller/sim/sdram_top_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ic/project/Sdram_Controller/sim/sdram_top_tb.v|
 !i113 0
-R3
-R4
+R6
+R1
