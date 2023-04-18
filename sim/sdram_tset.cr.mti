@@ -1,0 +1,36 @@
+D:/ic/project/Sdram_Controller/src/sdram_init.v {1 {vlog -work work -vopt -stats=none D:/ic/project/Sdram_Controller/src/sdram_init.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module sdram_init
+
+Top level modules:
+	sdram_init
+
+} {} {}} D:/ic/project/Sdram_Controller/sim/sdram_top_tb.v {1 {vlog -work work -vopt -stats=none D:/ic/project/Sdram_Controller/sim/sdram_top_tb.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module sdram_top_tb
+
+Top level modules:
+	sdram_top_tb
+
+} {} {}} D:/ic/project/Sdram_Controller/sim/sdram_model_plus.v {1 {vlog -work work -vopt -stats=none D:/ic/project/Sdram_Controller/sim/sdram_model_plus.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module sdram_model_plus
+
+Top level modules:
+	sdram_model_plus
+
+} {} {}} D:/ic/project/Sdram_Controller/src/sdram_top.v {1 {vlog -work work -vopt -stats=none D:/ic/project/Sdram_Controller/src/sdram_top.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module sdram_top
+
+Top level modules:
+	sdram_top
+
+} {} {}} D:/ic/project/Sdram_Controller/src/sdram_auto_refr.v {1 {vlog -work work -vopt -stats=none D:/ic/project/Sdram_Controller/src/sdram_auto_refr.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module sdram_auto_refr
+
+Top level modules:
+	sdram_auto_refr
+
+} {} {}}

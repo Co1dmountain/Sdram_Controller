@@ -1,0 +1,9 @@
+Cmd				cs		ras		cas		we
+
+Precharge		0		0		1		0
+auto refresh	0		0		0		1
+nop				0		1		1		1
+load mode reg	0		0		0		0
+
+addr			12'b00_0_00_011_0010
+
