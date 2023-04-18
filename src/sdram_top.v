@@ -41,7 +41,7 @@ module sdram_top(
 	localparam  AREFRE			= 5'b00100;
 	localparam  WRITE			= 5'b01000;
 	localparam  READ			= 5'b10000;
-	reg  [4:0]	c_state, n_state;
+	reg  [4:0]	c_state;
 	
 	//// main code ////
 	assign sdram_dqm  = 2'b00;
@@ -69,6 +69,12 @@ module sdram_top(
 					if(refr_en) begin
 						c_state <= AREFRE;
 					end
+					else if(write_en) begin  //进入写状态
+						c_state <= WRITE;
+					end
+					else if(read_en) begin   //进入读状态
+						c_state <= READ;
+					end
 					else begin
 						c_state <= ARBIT;
 					end
@@ -82,6 +88,9 @@ module sdram_top(
 					end
 				end
 				//write
+				WRITE : begin
+					if()
+				end
 				//read
 			endcase
 		end
