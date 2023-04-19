@@ -3,7 +3,7 @@
 module sdram_top_tb();
 	reg sys_clk;
 	reg sys_rst_n;
-	
+	reg write_trig;
 
 	wire sdram_clk;
 	wire sdram_cke;
@@ -19,8 +19,13 @@ module sdram_top_tb();
 	initial begin
 		sys_clk = 1;
 		sys_rst_n = 0;
+		write_trig = 0;
 		#100
 		sys_rst_n = 1;
+		#250000
+		write_trig = 1;
+		#20
+		write_trig = 0;
 	end
 	
 	always #10 sys_clk <= ~sys_clk;
@@ -38,7 +43,7 @@ module sdram_top_tb();
 
 		.sys_clk(sys_clk),
 		.sys_rst_n(sys_rst_n),
-		
+		.write_trig(write_trig),
 
 		.sdram_clk(sdram_clk),
 		.sdram_cke(sdram_cke),

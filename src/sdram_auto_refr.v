@@ -60,7 +60,7 @@ module sdram_auto_refr(
 		if(!sys_rst_n) begin
 			refr_end <= 1'b0;
 		end
-		else if(refr_en && cmd_cnt >= 'd4) begin
+		else if(cmd_cnt >= 'd4) begin
 			refr_end <= 1'b1;
 		end
 		else if(!refr_en) begin

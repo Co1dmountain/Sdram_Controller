@@ -1,4 +1,4 @@
-module Sdram_write(
+module sdram_write(
 		// input
 		input 				sys_clk					,
 		input				sys_rst_n				,
@@ -7,12 +7,13 @@ module Sdram_write(
 		input				write_en				,
 		input				refresh_req				,  //刷新请求信号
 		// output
+		output	reg			byte_end				,
 		output				write_req				,
 		output				write_end				,
 		output	reg	[ 3:0]	write_cmd				,
 		output	reg	[11:0]	write_addr				,
 		output	wire[ 1:0]	bank_addr				,
-		output	reg	[15:0]	wr_data		
+		output	reg	[15:0]	write_data				
 		
 );
 
@@ -56,11 +57,12 @@ module Sdram_write(
 	// state machine
 	always @(posedge sys_clk or negedge sys_rst_n) begin
 		if(!sys_rst_n) begin
-			state < =S_IDLE;
+			state <= S_IDLE;
+			byte_end <= 1'b0;
 		end
 		else begin
 			case(state) 
-				S_IDLE : begin
+				S_IDLE : begin  //只进入该状态一次？
 					if(write_trig) begin
 						state <= S_REQ;
 					end
@@ -88,6 +90,7 @@ module Sdram_write(
 					// 1.收到sdram刷新请求，需要进行刷新,但必须保证当前突发结束
 					if(refresh_req && burst_cnt == 2'd3 && flag_write) begin
 						state <= S_PRE;//回到PRECHARGE状态
+						byte_end <= 1'b1;
 					end
 					// 2.写完一行数据，但写操作未结束(数据未写完)，此时需要进行换行
 					else if(flag_row_end && !flag_data_end && flag_write) begin
@@ -99,6 +102,7 @@ module Sdram_write(
 					end
 				end
 				S_PRE : begin
+					byte_end <= 1'b0;
 					if(flag_row_end && !flag_data_end) begin  // 换行
 						state <= S_ACT;
 					end
@@ -298,19 +302,32 @@ module Sdram_write(
 	
 	// generate data for test
 	always @(*) begin
-		case(burst_cnt_t)
-			0:		wr_data	<=		'd3;
-			1:		wr_data	<=		'd5;
-			2:		wr_data	<=		'd7;
-			3:		wr_data	<=		'd9;
+		case(burst_cnt)
+			0:		write_data	<=		'd3;
+			1:		write_data	<=		'd5;
+			2:		write_data	<=		'd7;
+			3:		write_data	<=		'd9;
 		endcase
 	end
 	
 	assign col_addr = col_addr_cnt;
 	assign row_addr = row_addr_cnt;
 	assign write_req			=		state[1];
+	assign bank_addr = 2'b00;
 	
-	
+	always @(*) begin // wr_addr
+		case(state)
+			S_ACT:
+					if(act_cnt == 'd0)
+						write_addr	<=	row_addr;
+			S_WR:	write_addr	<=	{3'b000,col_addr};
+			S_PRE:	
+					if(pre_cnt == 'd0)
+						write_addr	<=	{12'b0100_0000_0000};
+						
+		endcase
+
+	end
 	
 	
 
