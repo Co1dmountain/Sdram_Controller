@@ -77,7 +77,8 @@ module sdram_top(
 					end
 				end
 				ARBIT : begin
-					if(refr_en && !write_en) begin
+					//if(refr_en && !write_en) begin
+					if(refr_en) begin  // 应该优先满足refresh，只要收到刷新信号并一次burst(byte_end == 1)完成退出写状态,就应该进入刷新状态
 						c_state <= AREFRE;
 					end
 					else if(!refr_en && write_en) begin  //进入写状态，write_en如何产生？

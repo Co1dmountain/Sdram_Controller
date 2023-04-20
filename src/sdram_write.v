@@ -191,7 +191,7 @@ module sdram_write(
 		if(!sys_rst_n) begin
 			col_addr_cnt <= 'd0;
 		end
-		else if(col_addr_cnt == 'd511) begin
+		else if(col_addr_cnt == 'd508) begin
 			col_addr_cnt <= 'd0;
 		end
 		else if(state == S_WR && burst_cnt == 2'd3 && flag_write) begin  ///
@@ -225,7 +225,7 @@ module sdram_write(
 		if(!sys_rst_n) begin
 			row_addr_cnt <= 'd0;
 		end	
-		else if(col_addr_cnt == 'd511 && !flag_data_end) begin  ///
+		else if(col_addr_cnt == 'd508 && !flag_data_end) begin  ///
 			row_addr_cnt <= row_addr_cnt + 1'b1;
 		end
 		else begin
@@ -238,7 +238,7 @@ module sdram_write(
 		if(!sys_rst_n) begin
 			flag_row_end <= 1'b0;
 		end
-		else if(state == S_WR && col_addr_cnt == 'd510) begin  ///
+		else if(state == S_WR && col_addr_cnt == 'd508) begin  ///
 			flag_row_end <= 1'b1;
 		end
 		else begin
@@ -251,7 +251,8 @@ module sdram_write(
 		if(!sys_rst_n) begin
 			flag_data_end <= 1'b0;
 		end
-		else if(row_addr_cnt == 'd1 && col_addr_cnt == 'd510) begin  ///
+		//else if(row_addr_cnt == 'd1 && col_addr_cnt == 'd508) begin  /// col_addr每次加4,怎么可能到510
+		else if(row_addr_cnt == 'd1 && flag_row_end == 1'b1) begin  /// col_addr每次加4,怎么可能到510
 			flag_data_end <= 1'b1;
 		end
 		else begin
